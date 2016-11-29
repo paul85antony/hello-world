@@ -1,0 +1,52 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://www.google.com/"
+    },
+    {
+      "type": "verifyElementValue",
+      "locator": {
+        "type": "name",
+        "value": "btnK"
+      },
+      "value": "Google Search"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "lst-ib"
+      },
+      "text": "selenium"
+    },
+    {
+      "type": "sendKeysToElement",
+      "locator": {
+        "type": "id",
+        "value": "lst-ib"
+      },
+      "text": "\n"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "All"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='srg']/div[1]/div/h3/a"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
